@@ -1,4 +1,4 @@
-
+"use client"
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { collection, getDocs } from 'firebase/firestore';
 import { db, functions } from '@/lib/firebase';
