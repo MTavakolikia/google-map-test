@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 import { getFunctions } from 'firebase/functions';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyASGf3xaQKOEsMZaYET96y4yh0GI9oI4pk",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "uber4things.firebaseapp.com",
   databaseURL: "https://uber4things.firebaseio.com",
   projectId: "uber4things",
