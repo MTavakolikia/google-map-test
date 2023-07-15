@@ -19,6 +19,7 @@ import Loader from '@/components/Loader';
 import DisableOrginForm from '@/components/DisableOrginForm';
 
 import { ImLocation2 } from "react-icons/im";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -486,10 +487,12 @@ export default function Home() {
                   </>
                 }{isParcelsConfirmed &&
                   <div className="flex items-center justify-start">
-                    <img
+                    <Image
                       src={parcelConfirmed[0].parcel_img_url}
                       alt={parcelConfirmed[0].parcel_type}
                       className="w-10 object-contain h-10 p-1 "
+                      width={50}
+                      height={50}
                     />
                     <p className="mx-2 text-sm text-gray-500">{parcelConfirmed[0].parcel_type}</p>
                   </div>
