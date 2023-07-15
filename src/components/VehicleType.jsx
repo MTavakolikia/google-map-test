@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 const VehicleType = ({ cycling, riding, walking, message }) => {
@@ -20,7 +21,13 @@ const VehicleType = ({ cycling, riding, walking, message }) => {
           id="ride"
           onClick={() => handleDivClick("ride")}
         >
-          <img src="/motor.png" className="w-10 object-contain h-10 p-1" />
+          <Image
+            src="/motor.png"
+            className="w-10 object-contain h-10 p-1"
+            alt="Motor"
+            width={50}
+            height={50}
+          />
           <p>{riding?.price} $</p>
           {riding?.duration && <p>{roundFunc(riding?.duration)} min</p>}
         </div>
@@ -31,7 +38,13 @@ const VehicleType = ({ cycling, riding, walking, message }) => {
           id="cycle"
           onClick={() => handleDivClick("cycle")}
         >
-          <img src="/bike.png" className="w-10 object-contain h-10 p-1" />
+          <Image
+            src="/bike.png"
+            className="w-10 object-contain h-10 p-1"
+            alt="Bike"
+            width={50}
+            height={50}
+          />
           <p>{cycling?.price}$</p>
           {cycling?.duration && <p>{roundFunc(cycling?.duration)}min</p>}
         </div>
@@ -42,7 +55,13 @@ const VehicleType = ({ cycling, riding, walking, message }) => {
           id="walk"
           onClick={() => handleDivClick("walk")}
         >
-          <img src="/walk2.png" className="w-10 object-contain h-10 p-1" />
+          <Image
+            src="/walk2.png"
+            className="w-10 object-contain h-10 p-1"
+            alt="Walk"
+            width={50}
+            height={50}
+          />
           <p>{walking?.price} $</p>
           {walking?.duration && <p>{roundFunc(walking?.duration)} min</p>}
         </div>

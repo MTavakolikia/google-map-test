@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ParcelsType = ({
   id,
   parcel_description,
@@ -20,10 +22,12 @@ const ParcelsType = ({
       className={`flex items-center justify-between  border-gray-300  hover:bg-gray-200 text-gray-600 cursor-pointer py-2 px-3 border-b-2 ${bgslected}`}
     >
       <div className="flex items-center justify-start">
-        <img
+        <Image
           src={parcel_img_url}
           alt={parcel_type}
           className="w-10 object-contain h-10 p-1 bg-gray-300"
+          width={50}
+          height={50}
         />
         <p className="mx-2 text-sm">{parcel_type}</p>
       </div>
